@@ -16,7 +16,7 @@ console.log(removeElement([1,2,3,4,5,6,7,8]))
 /* 2. Given an array of nested arrays. Write a recursive function that flattens it. (Hint create function that concats arrays). */
 
 function flatten (arr) {
-  var newArr = [];
+  let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
       newArr = newArr.concat(flatten(arr[i]));
