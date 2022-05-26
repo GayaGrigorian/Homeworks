@@ -34,5 +34,24 @@ function delay(fn, ms) {
 
 let b= delay(fn, 1000)
 
+
+/* 4. Implement Debounce decorator */
+
+function fn() {
+    console.log ("asd")
+}
+
+function delay(fn, ms) {
+ let timeout
+   return function () {
+       clearTimeout(timeout)
+       timeout= setTimeout(() => fn.apply(this, arguments), ms)
+    }
+}
+
+let b= delay(fn,1000)
+console.log (b())
+
+
 console.log(b())
 
